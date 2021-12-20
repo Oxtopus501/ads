@@ -1,0 +1,31 @@
+.table {
+  width: calc(100% - 24px);
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 16px;
+  margin: 0 auto;
+  border: 2px solid rgba(64, 94, 156, 0.5);
+}
+
+.table__header {
+  border: 2px solid rgba(64, 94, 156, 0.5);
+  text-align: left;
+}
+
+.table__header-cell {
+  padding: 8px 8px;
+}
+
+.table__indicator {
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+}
+
+.table__indicator_status_in-work {
+  background-color: #ffeb3b;
+}
+
+.table__indicator_status_solved {
+  background-color: #8bc34a;
+}

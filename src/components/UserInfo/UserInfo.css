@@ -1,0 +1,7 @@
+.user-info {
+  display: flex;
+}
+
+.user-info__name {
+  margin-right: 12px;
+}

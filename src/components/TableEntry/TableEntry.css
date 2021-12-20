@@ -1,0 +1,8 @@
+.table__entry {
+  text-align: left;
+  border-bottom: 1px solid rgba(2, 153, 199, 0.4);
+}
+
+.table__entry-cell {
+  padding: 4px 8px;
+}
