@@ -1,4 +1,4 @@
-.new-application__modal {
+.modal {
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.4);
@@ -8,11 +8,11 @@
   display: none;
 }
 
-.new-application__modal_active {
+.modal_active {
   display: block;
 }
 
-.new-application__modal-content {
+.modal__content {
   width: 500px;
   margin: 10px auto;
   position: relative;
@@ -22,7 +22,7 @@
   max-height: 696px;
 }
 
-.new-application__header {
+.modal__header {
   height: 48px;
   background-color: #405e9c;
   color: #fff;
@@ -32,37 +32,37 @@
   border-top-right-radius: 12px;
 }
 
-.new-application__title {
+.modal__title {
   padding-top: 6px;
   font-size: 24px;
   line-height: 36px;
 }
 
-.new-application__form {
+.modal__form {
   height: calc(100% - 80px);
   overflow: auto;
 }
 
-.new-application__input {
+.modal__input {
   width: calc(100% - 48px);
   height: 36px;
   margin-bottom: 12px;
   font-size: 16px;
 }
 
-.new-application__textarea {
+.modal__textarea {
   width: calc(100% - 48px);
   height: 120px;
   margin-bottom: 18px;
 }
 
-.new-application__caption {
+.modal__caption {
   color: #000;
   margin: 0 24px 12px;
   text-align: left;
 }
 
-.new-application__submit-button {
+.modal__submit-button {
   width: 140px;
   height: 40px;
   position: relative;
@@ -74,6 +74,6 @@
   border-radius: 8px;
 }
 
-.new-application__submit-button:hover {
+.modal__submit-button:hover {
   cursor: pointer;
 }

@@ -3,11 +3,11 @@ import logo from "../../img/fishLogo.png";
 import NavBar from "../NavBar/NavBar";
 import UserInfo from "../UserInfo/UserInfo";
 
-function Header() {
+function Header(props) {
   return (
     <header className="header">
       <img src={logo} alt="logo" className="header__logo" />
-      <NavBar />
+      <NavBar setModalIsActive={props.setModalIsActive} />
       <UserInfo />
     </header>
   );

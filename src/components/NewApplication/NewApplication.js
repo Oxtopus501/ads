@@ -1,16 +1,22 @@
 import "./NewApplication.css";
+import CloseButton from "../CloseButton/CloseButton";
 
-function NewApplication() {
+function NewApplication(props) {
   return (
-    <div className="new-application__modal new-application__modal_isActive">
-      <p className="new-application__to-do">
-        Это будущее модальное окно для добавления новой заявки. До добавления
-        оверлея и состояний, регулирующих его видимость, оно полежит здесь. По
-        окончании работ оно будет скрыто по-умолчанию и доступно по нажатию
-        ссылки "Создать заявку"
-      </p>
-      <div className="new-application__header">
-        <h2 className="new-application__title">Добавить заявку</h2>
+    <div
+      className={`new-application__modal ${
+        props.isActive ? "new-application__modal_active" : ""
+      }`}
+      onClick={() => props.setIsActive(false)}
+    >
+      <div
+        className="new-application__modal-content"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <CloseButton setIsActive={props.setIsActive} />
+        <div className="new-application__header">
+          <h2 className="new-application__title">Добавить заявку</h2>
+        </div>
         <form className="new-application__form">
           <input
             className="new-application__input"
@@ -41,6 +47,9 @@ function NewApplication() {
             Подробное описание проблемы
           </p>
           <textarea className="new-application__textarea"></textarea>
+          <button type="submit" className="new-application__submit-button">
+            Отправить
+          </button>
         </form>
       </div>
     </div>

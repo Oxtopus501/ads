@@ -1,12 +1,17 @@
+import React from "react";
+
 import Header from "../Header/Header";
+import Modal from "../Modal/Modal";
 import NewApplication from "../NewApplication/NewApplication";
 import Table from "../Table/Table";
+
 function Applications() {
+  const [modalIsActive, setModalIsActive] = React.useState(false);
   return (
     <>
-      <Header />
+      <Header setModalIsActive={setModalIsActive} />
       <Table />
-      <NewApplication />
+      <Modal isActive={modalIsActive} setIsActive={setModalIsActive} />
     </>
   );
 }
