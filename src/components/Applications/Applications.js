@@ -6,12 +6,10 @@ import NewApplication from "../NewApplication/NewApplication";
 import Table from "../Table/Table";
 
 function Applications() {
-  const [modalIsActive, setModalIsActive] = React.useState(false);
   return (
     <>
-      <Header setModalIsActive={setModalIsActive} />
+      <Header />
       <Table />
-      <Modal isActive={modalIsActive} setIsActive={setModalIsActive} />
     </>
   );
 }

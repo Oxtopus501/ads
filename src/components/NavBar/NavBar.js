@@ -11,12 +11,9 @@ function NavBar(props) {
           </Link>
         </li>
         <li>
-          <a
-            className="navbar__list-item"
-            onClick={() => props.setModalIsActive(true)}
-          >
+          <Link to="/new-appl" className="navbar__list-item">
             Создать заявку
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
