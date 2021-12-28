@@ -7,6 +7,7 @@ import "./App.css";
 import Applications from "../components/Applications/Applications";
 import AuthForm from "../components/AuthForm/AuthForm";
 import NewApplication from "../components/NewApplication/NewApplication";
+import routes from "../utils/routesConfig";
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
           <Route exact path="/" element={<AuthForm />} />
           <Route path="/appl" element={<Applications />} />
           <Route path="/new-appl" element={<NewApplication />} />
+          <Route
+            path={routes.applicationsDetails.mask}
+            element={<NewApplication />}
+          />
         </Routes>
       </div>
     </BrowserRouter>

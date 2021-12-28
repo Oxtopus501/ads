@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
+import rootStore from "../../store/RootStore/instance";
 import Header from "../Header/Header";
-import Modal from "../Modal/Modal";
-import NewApplication from "../NewApplication/NewApplication";
 import Table from "../Table/Table";
 
 function Applications() {
+  useEffect(() => {
+    rootStore.applicationsListStore.getApplications("random_user?size=10");
+  });
+
   return (
     <>
       <Header />

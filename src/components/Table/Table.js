@@ -1,3 +1,8 @@
+import { observer } from "mobx-react-lite";
+import { Link } from "react-router-dom";
+
+import rootStore from "../../store/RootStore/instance";
+import routes from "../../utils/routesConfig";
 import TableEntry from "../TableEntry/TableEntry";
 import "./Table.css";
 
@@ -19,6 +24,24 @@ function Table() {
         </tr>
       </thead>
       <tbody className="table__body">
+        {rootStore.applicationsListStore.applicationsList.map((appl) => {
+          return (
+            <TableEntry
+              key={appl.id}
+              id={appl.id}
+              date={new Date().toString().slice(0, 24)}
+              applicant={`${appl.first_name}, ${appl.last_name}`}
+              address={appl.address.street_address}
+              service={appl.employment.title}
+              competionTime={new Date(2022, 0, 1, 0, 0, 0, 0)
+                .toString()
+                .slice(0, 24)}
+              status={appl.subscription.status}
+              executor={appl.address.street_name}
+              applcationText={`${appl.employment.key_skill} ${appl.gender}`}
+            />
+          );
+        })}
         <TableEntry
           id={1}
           date={"15 мая, 12:00"}
@@ -52,4 +75,4 @@ function Table() {
   );
 }
 
-export default Table;
+export default observer(Table);

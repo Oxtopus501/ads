@@ -1,22 +1,91 @@
+import { Link } from "react-router-dom";
+
 import "./TableEntry.css";
+import routes from "../../utils/routesConfig";
 
 function TableEntry(props) {
   return (
-    <tr className="table__entry" key={props.id}>
-      <td className="table__entry-cell">{props.id}</td>
-      <td className="table__entry-cell">{props.date}</td>
-      <td className="table__entry-cell">{props.applicant}</td>
-      <td className="table__entry-cell">{props.address}</td>
-      <td className="table__entry-cell">{props.service}</td>
-      <td className="table__entry-cell">{props.competionTime}</td>
-      <td className="table__entry-cell">{props.status}</td>
-      <td className="table__entry-cell">
+    <tr className="table-entry" key={props.id}>
+      <td className="table-entry__cell">
+        <Link
+          className="table-entry__link"
+          to={routes.applicationsDetails.create(props.id)}
+        >
+          <span className="table-entry__inner-text">{props.id}</span>
+        </Link>
+      </td>
+
+      <td className="table-entry__cell">
+        <Link
+          className="table-entry__link"
+          to={routes.applicationsDetails.create(props.id)}
+        >
+          <span className="table-entry__inner-text">{props.date}</span>
+        </Link>
+      </td>
+      <td className="table-entry__cell">
+        <Link
+          className="table-entry__link"
+          to={routes.applicationsDetails.create(props.id)}
+        >
+          <span className="table-entry__inner-text">{props.applicant}</span>
+        </Link>
+      </td>
+      <td className="table-entry__cell">
+        <Link
+          className="table-entry__link"
+          to={routes.applicationsDetails.create(props.id)}
+        >
+          <span className="table-entry__inner-text">{props.address}</span>
+        </Link>
+      </td>
+      <td className="table-entry__cell">
+        <Link
+          className="table-entry__link"
+          to={routes.applicationsDetails.create(props.id)}
+        >
+          <span className="table-entry__inner-text">{props.service}</span>
+        </Link>
+      </td>
+      <td className="table-entry__cell">
+        <Link
+          className="table-entry__link"
+          to={routes.applicationsDetails.create(props.id)}
+        >
+          <span className="table-entry__inner-text">{props.competionTime}</span>
+        </Link>
+      </td>
+      <td className="table-entry__cell">
+        <Link
+          className="table-entry__link"
+          to={routes.applicationsDetails.create(props.id)}
+        >
+          <span className="table-entry__inner-text">{props.status}</span>
+        </Link>
+      </td>
+      <td className="table-entry__cell">
         <div
           className={`table__indicator table__indicator_status_${props.statusStyle}`}
         ></div>
       </td>
-      <td className="table__entry-cell">{props.executor}</td>
-      <td className="table__entry-cell">{props.applcationText}</td>
+      <td className="table-entry__cell">
+        <Link
+          className="table-entry__link"
+          to={routes.applicationsDetails.create(props.id)}
+        >
+          <span className="table-entry__inner-text">{props.executor}</span>
+        </Link>
+      </td>
+      <td className="table-entry__cell">
+        <Link
+          className="table-entry__link"
+          to={routes.applicationsDetails.create(props.id)}
+        >
+          <span className="table-entry__inner-text">
+            {props.applcationText}
+          </span>
+        </Link>
+      </td>
     </tr>
   );
 }

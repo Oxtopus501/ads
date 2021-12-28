@@ -1,8 +1,22 @@
-.table__entry {
+.table-entry {
   text-align: left;
   border-bottom: 1px solid rgba(2, 153, 199, 0.4);
 }
 
-.table__entry-cell {
-  padding: 4px 8px;
+.table-entry__cell {
+}
+
+.table-entry__link {
+  display: flex;
+  height: 72px; /*Можно поменять на 100%, если задать высоту родительскому блоку*/
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+}
+
+.table-entry__inner-text {
+  padding: 0px 8px;
+  text-align: left;
+  /*#ede7f6*/
 }
