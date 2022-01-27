@@ -1,6 +1,6 @@
 import Header from "../Header/Header";
 import "./NewApplication.css";
-
+//Всем <datalist> необходимо будет брать список вариан6тов из Api?
 function NewApplication() {
   return (
     <>

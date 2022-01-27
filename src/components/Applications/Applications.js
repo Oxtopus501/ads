@@ -6,7 +6,7 @@ import Table from "../Table/Table";
 
 function Applications() {
   useEffect(() => {
-    rootStore.applicationsListStore.getApplications("random_user?size=10");
+    rootStore.applicationsListStore.getApplications("random_user?size=50");
   });
 
   return (

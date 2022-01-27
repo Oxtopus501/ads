@@ -1,7 +1,7 @@
 const routes = {
   applicationsDetails: {
-    mask: "/repos/:id",
-    create: (id) => `/repos/${id}`,
+    mask: "/applications/:id",
+    create: (id) => `/applications/${id}`,
   },
 };
 

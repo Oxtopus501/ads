@@ -12,12 +12,14 @@ function AuthForm() {
       </div>
       <input
         type="email"
+        name="email"
         className="auth-form__input"
         placeholder="Электронная почта"
         required
       ></input>
       <input
         type="password"
+        name="password"
         className="auth-form__input"
         placeholder="Пароль"
         required

@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <header className="header">
       <img src={logo} alt="logo" className="header__logo" />
-      <NavBar setModalIsActive={props.setModalIsActive} />
+      <NavBar />
       <UserInfo />
     </header>
   );

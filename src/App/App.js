@@ -6,6 +6,7 @@ import "../vendor/normalize.css";
 import "./App.css";
 import Applications from "../components/Applications/Applications";
 import AuthForm from "../components/AuthForm/AuthForm";
+import LocalApi from "../components/LocalApi/LocalApi";
 import NewApplication from "../components/NewApplication/NewApplication";
 import routes from "../utils/routesConfig";
 
@@ -21,6 +22,7 @@ function App() {
             path={routes.applicationsDetails.mask}
             element={<NewApplication />}
           />
+          <Route path="local-api" element={<LocalApi />} />
         </Routes>
       </div>
     </BrowserRouter>
